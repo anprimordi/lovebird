@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.hasil.HasilActivity">
+
+    <ImageView
+        android:id="@+id/image_diagnosis_logo"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/diagnosis_logo_img_description"
+        android:src="@drawable/app_logo_upper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/input_isi_form_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/primary_text"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_top"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_top">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_top">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/text_nama_burung"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/primary_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="nama burung" />
+
+                <TextView
+                    android:id="@+id/text_gejala_dialami"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/hasil_gejala_dialami_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/primary_text"
+                    app:layout_constraintStart_toStartOf="@id/text_nama_burung"
+                    app:layout_constraintTop_toBottomOf="@id/text_nama_burung" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_gejala_dialami"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toTopOf="@id/text_diagnosis_penyakit"
+                    app:layout_constraintEnd_toEndOf="@id/text_nama_burung"
+                    app:layout_constraintStart_toStartOf="@id/text_nama_burung"
+                    app:layout_constraintTop_toBottomOf="@id/text_gejala_dialami"
+                    tools:listitem="@layout/item_gejala" />
+
+                <TextView
+                    android:id="@+id/text_diagnosis_penyakit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/hasil_diagnosis_penyakit_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/primary_text"
+                    app:layout_constraintEnd_toEndOf="@id/text_nama_burung"
+                    app:layout_constraintStart_toStartOf="@id/text_nama_burung"
+                    app:layout_constraintTop_toBottomOf="@id/rv_gejala_dialami" />
+
+                <TextView
+                    android:id="@+id/text_hasil_diagnosis"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toTopOf="@id/text_solusi"
+                    app:layout_constraintEnd_toEndOf="@id/text_nama_burung"
+                    app:layout_constraintStart_toStartOf="@id/text_nama_burung"
+                    app:layout_constraintTop_toBottomOf="@id/text_diagnosis_penyakit"
+                    tools:text="Sakit ginjal" />
+
+                <TextView
+                    android:id="@+id/text_solusi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/hasil_solusi_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/primary_text"
+                    app:layout_constraintBottom_toTopOf="@id/text_deskripsi_solusi"
+                    app:layout_constraintEnd_toEndOf="@id/text_nama_burung"
+                    app:layout_constraintStart_toStartOf="@id/text_nama_burung"
+                    app:layout_constraintTop_toBottomOf="@id/text_hasil_diagnosis" />
+
+                <TextView
+                    android:id="@+id/text_deskripsi_solusi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="7"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/text_nama_burung"
+                    app:layout_constraintStart_toStartOf="@id/text_nama_burung"
+                    app:layout_constraintTop_toBottomOf="@id/text_solusi"
+                    tools:text="@tools:sample/lorem/random" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

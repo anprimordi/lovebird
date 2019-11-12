@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Lovebird Disease</string>
+    <string name="splashscreen_applogo_img_description">Logo aplikasi pada splashscreen</string>
+    <string name="home_logo_img_description">Logo aplikasi pada home</string>
+    <string name="action_mulai">mulai</string>
+    <string name="input_isi_form_text">Isi formulir berikut</string>
+    <string name="diagnosis_nama_burung_hint">Nama burung</string>
+    <string name="diagnosis_pilih_gejala_text">Pilih gejala</string>
+    <string name="diagnosis_logo_img_description">Gambar logo pada diagnosis</string>
+    <string name="hasil_gejala_dialami_text">Gejala yang dialami</string>
+    <string name="hasil_diagnosis_penyakit_text">Diagnosis penyakit</string>
+    <string name="hasil_solusi_text">Solusi</string>
+</resources>

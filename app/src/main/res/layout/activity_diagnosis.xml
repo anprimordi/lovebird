@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.diagnosis.DiagnosisActivity">
+
+    <ImageView
+        android:id="@+id/image_diagnosis_logo"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/diagnosis_logo_img_description"
+        android:src="@drawable/app_logo_upper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/input_isi_form_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/primary_text"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_top"
+        app:layout_constraintStart_toStartOf="@id/card_form" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_form"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:background="@android:color/white"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_top">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_vertical"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/field_nama_burung"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:focusable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/edit_nama_burung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foregroundTint="@color/colorPrimary"
+                    android:hint="@string/diagnosis_nama_burung_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/text_pilih_gejala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/diagnosis_pilih_gejala_text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/primary_text"
+                app:layout_constraintStart_toStartOf="@id/field_nama_burung"
+                app:layout_constraintTop_toBottomOf="@id/field_nama_burung" />
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/field_nama_burung"
+                app:layout_constraintStart_toStartOf="@id/field_nama_burung"
+                app:layout_constraintTop_toBottomOf="@id/text_pilih_gejala">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_gejala"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_gejala" />
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_diagnosis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_stethoscope_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/card_form"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_form" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
