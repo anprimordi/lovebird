@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="@string/input_isi_form_text"
+        android:text="@string/diagnosis_isi_form_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/primary_text"
         app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_top"

@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.makaryostudio.lovebird.R
 import com.makaryostudio.lovebird.repository.model.Gejala
 
-class DiagnosisAdapter internal constructor(diagnosisActivity: DiagnosisActivity, private val context: Context) :
+class DiagnosisAdapter internal constructor(private val context: Context) :
     RecyclerView.Adapter<DiagnosisAdapter.ViewHolder>() {
 
     private var mListData: List<Gejala>

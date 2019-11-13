@@ -1,13 +1,110 @@
 <resources>
+    <!--  general purpose  -->
     <string name="app_name">Lovebird Disease</string>
+
+    <!--  splashscreen  -->
     <string name="splashscreen_applogo_img_description">Logo aplikasi pada splashscreen</string>
+
+    <!--  home  -->
     <string name="home_logo_img_description">Logo aplikasi pada home</string>
     <string name="action_mulai">mulai</string>
-    <string name="input_isi_form_text">Isi formulir berikut</string>
+
+    <!--  input  -->
+    <string name="diagnosis_isi_form_text">Isi formulir berikut</string>
     <string name="diagnosis_nama_burung_hint">Nama burung</string>
     <string name="diagnosis_pilih_gejala_text">Pilih gejala</string>
     <string name="diagnosis_logo_img_description">Gambar logo pada diagnosis</string>
+
+    <!--  hasil  -->
     <string name="hasil_gejala_dialami_text">Gejala yang dialami</string>
     <string name="hasil_diagnosis_penyakit_text">Diagnosis penyakit</string>
     <string name="hasil_solusi_text">Solusi</string>
+
+    <!--  nama penyakit  -->
+    <array name="array_nama_penyakit">
+        <item>Cacingan</item>
+        <item>Kutu Burung</item>
+        <item>Mencret Bakteri</item>
+        <item>Berak Kapur</item>
+        <item>Snot</item>
+
+        <item>Bubul</item>
+        <item>Virus Burung</item>
+        <item>Pernapasan</item>
+    </array>
+
+    <!--  deskripsi penyakit  -->
+    <array name="array_deskripsi_penyakit">
+        <item>Umumnya terjadi karena virus, jaga kebersihan kandang dan jaga kandang agar tetap
+            terkena sinar matahari sehingga virus tidak berkembang biak.
+        </item>
+        <item>Sering mandikan dan jemur burung agar bebas dari kutu burung.</item>
+        <item>Diakibatkan tempat makan dan minum burung yang kotor sehingga cacing dapat berkembang
+            biak.
+        </item>
+        <item>Sering bersihkan kandang, tempat makan dan minum. Bersihkan tempat kotor dengan
+            bioseptik. Pisahkan burung terinfeksi dari yang lain.
+        </item>
+        <item>Disebabkan oleh virus. Jaga kebersihan kandang dan segera obati burung yang sedang
+            sakit.
+        </item>
+
+        <item>Disebabkan oleh bakteri. Bersihkan kandang secara rutin.</item>
+        <item>Virus menyerang daya tahan tubuh burung. Jaga kebersihan kandang dan jaga kandang agar
+            tatap terkena sinar matahari, sehingga virus sulit berkembang biak.
+        </item>
+        <item>Penyakit dapat menular kepada anak jika induk terjangkit. Pisahkan induk atau anak
+            yang terkena penyakit dari yang lain. Obati burung sakit tersebut.
+        </item>
+    </array>
+
+    <!--  nama gejala  -->
+    <array name="array_nama_gejala">
+        <item>Nafsu makan menurun</item>
+        <item>Kotoran cair</item>
+        <item>Bulu tidak rapi</item>
+        <item>Kurang bergairah/lemas</item>
+        <item>Bobot burung menurun</item>
+
+        <item>Jarang berkicau</item>
+        <item>Sering menggigit bulu</item>
+        <item>Kotoran berwarna keruh</item>
+        <item>Kotoran berbau busuk</item>
+        <item>Banyak kutu</item>
+
+        <item>Sayap menggantung</item>
+        <item>Mata berair</item>
+        <item>Mata bengkak</item>
+        <item>Kaki bengkak</item>
+        <item>Kuku memanjang</item>
+
+        <item>Lemah</item>
+        <item>Kelumpuhan anggota badan</item>
+        <item>Kotoran seperti kapur</item>
+    </array>
+
+    <!--  bobot  -->
+    <array name="array_bobot">
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>5</item>
+        <item>5</item>
+
+        <item>4</item>
+        <item>3</item>
+        <item>5</item>
+        <item>5</item>
+        <item>4</item>
+
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>3</item>
+
+        <item>1</item>
+        <item>4</item>
+        <item>5</item>
+    </array>
 </resources>

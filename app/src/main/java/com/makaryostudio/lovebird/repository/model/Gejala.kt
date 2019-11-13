@@ -7,7 +7,7 @@ data class Gejala(
     var kodeGejala: String = "",
     var gejalaDialami: String = "",
     var bobot: Int,
-    var checked: Boolean
+    var checked: Boolean = false
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString().toString(),
