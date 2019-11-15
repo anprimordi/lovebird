@@ -23,7 +23,7 @@ class DiagnosisActivity : AppCompatActivity(), DiagnosisContract.View {
 
 
     override fun onLoadListGejalaSucceed(listGejala: List<Gejala>) {
-
+        rvGejala.setHasFixedSize(true)
         adapter.loadListData(listGejala)
     }
 
@@ -31,7 +31,6 @@ class DiagnosisActivity : AppCompatActivity(), DiagnosisContract.View {
         super.onStart()
         presenter.start()
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -7,7 +7,7 @@ import com.makaryostudio.lovebird.repository.model.Gejala
 interface DiagnosisContract {
     interface Presenter : BasePresenter {
         fun loadListGejala()
-        fun getSelectedItems(isSelected: Boolean): ArrayList<Gejala>
+//        fun getSelectedItems(isSelected: Boolean): ArrayList<Gejala>
     }
 
     interface View : BaseView<Presenter> {

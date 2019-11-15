@@ -8,11 +8,13 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.recyclerview.widget.RecyclerView
 import com.makaryostudio.lovebird.R
+import com.makaryostudio.lovebird.feature.hasil.HasilActivity
 import com.makaryostudio.lovebird.repository.model.Gejala
 
 class DiagnosisAdapter internal constructor(private val context: Context) :
     RecyclerView.Adapter<DiagnosisAdapter.ViewHolder>() {
 
+    private var mCheckedGejala: ArrayList<Gejala> = ArrayList()
     private var mListData: List<Gejala>
 
     init {
@@ -39,24 +41,25 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val gejala = mListData[position]
 
-        holder.mCbGejala.text = gejala.gejalaDialami
-        holder.mCbGejala.isChecked = gejala.checked
+        holder.mCbGejala.text = gejala.gejalaDialami.toString()
+        holder.mCbGejala.isChecked = gejala.isChecked
 
         holder.mCbGejala.setOnClickListener {
-            if (!gejala.checked) {
+            val intent = Intent(context, HasilActivity::class.java)
+
+            if (!gejala.isChecked) {
                 holder.mCbGejala.isChecked = true
-                gejala.checked = true
+                gejala.isChecked = true
+                mCheckedGejala.add(gejala)
             } else {
                 holder.mCbGejala.isChecked = false
-                gejala.checked = false
+                gejala.isChecked = false
+                mCheckedGejala.remove(gejala)
             }
-        }
 
-//        if (holder.mCbGejala.isChecked) {
-//            val intent = Intent()
-//            intent.putExtra("checked", holder.mCbGejala.isChecked)
-//            intent.putExtra("gejala", gejala)
-//        }
+            intent.putExtra("checked", mCheckedGejala)
+            intent.putExtra("gejala", gejala)
+        }
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
