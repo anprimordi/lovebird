@@ -42,12 +42,21 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
         holder.mCbGejala.text = gejala.gejalaDialami
         holder.mCbGejala.isChecked = gejala.checked
 
-        if (holder.mCbGejala.isChecked) {
-            val intent = Intent()
-//            intent.putExtra("checked", holder.mCbGejala.isChecked)
-            intent.putExtra("gejala", gejala)
-            context.startActivity(intent)
+        holder.mCbGejala.setOnClickListener {
+            if (!gejala.checked) {
+                holder.mCbGejala.isChecked = true
+                gejala.checked = true
+            } else {
+                holder.mCbGejala.isChecked = false
+                gejala.checked = false
+            }
         }
+
+//        if (holder.mCbGejala.isChecked) {
+//            val intent = Intent()
+//            intent.putExtra("checked", holder.mCbGejala.isChecked)
+//            intent.putExtra("gejala", gejala)
+//        }
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

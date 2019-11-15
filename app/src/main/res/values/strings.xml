@@ -58,6 +58,31 @@
         </item>
     </array>
 
+    <!--  kode gejala  -->
+    <array name="array_kode_gejala">
+        <item>G001</item>
+        <item>G002</item>
+        <item>G003</item>
+        <item>G004</item>
+        <item>G005</item>
+
+        <item>G006</item>
+        <item>G007</item>
+        <item>G008</item>
+        <item>G009</item>
+        <item>G010</item>
+
+        <item>G011</item>
+        <item>G012</item>
+        <item>G013</item>
+        <item>G014</item>
+        <item>G015</item>
+
+        <item>G016</item>
+        <item>G017</item>
+        <item>G018</item>
+    </array>
+
     <!--  nama gejala  -->
     <array name="array_nama_gejala">
         <item>Nafsu makan menurun</item>
@@ -84,7 +109,7 @@
     </array>
 
     <!--  bobot  -->
-    <array name="array_bobot">
+    <array name="array_bobot_gejala">
         <item>5</item>
         <item>4</item>
         <item>3</item>
