@@ -19,6 +19,8 @@
     <string name="hasil_gejala_dialami_text">Gejala yang dialami</string>
     <string name="hasil_diagnosis_penyakit_text">Diagnosis penyakit</string>
     <string name="hasil_solusi_text">Solusi</string>
+    <string name="hasil_diagnosis_text">Hasil Diagnosis</string>
+    <string name="hasil_green_dot_img">Gambar titik hijau pada item hasil</string>
 
     <!--  nama penyakit  -->
     <array name="array_nama_penyakit">
