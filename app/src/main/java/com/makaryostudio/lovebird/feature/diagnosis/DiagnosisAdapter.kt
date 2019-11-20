@@ -15,6 +15,7 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
     RecyclerView.Adapter<DiagnosisAdapter.ViewHolder>() {
 
     private var mCheckedGejala: ArrayList<Gejala> = ArrayList()
+    private var inputGejala : ArrayList<Int> = ArrayList()
     private var mListData: List<Gejala>
 
     init {
@@ -51,10 +52,13 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
                 holder.mCbGejala.isChecked = true
                 gejala.isChecked = true
                 mCheckedGejala.add(gejala)
+                inputGejala.add(gejala.kodeGejala)
+
             } else {
                 holder.mCbGejala.isChecked = false
                 gejala.isChecked = false
                 mCheckedGejala.remove(gejala)
+                inputGejala.remove(gejala.kodeGejala)
             }
 
             intent.putExtra("checked", mCheckedGejala)
