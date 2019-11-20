@@ -6,7 +6,7 @@ import android.os.Parcelable
 data class Gejala(
     var kodeGejala: Int,
     var gejalaDialami: String = "",
-    var bobot: Int
+    var bobot: Float
 ) : Parcelable {
     var isChecked: Boolean = false
 
@@ -14,7 +14,7 @@ data class Gejala(
 
         parcel.readInt(),
         parcel.readString().toString(),
-        parcel.readInt()
+        parcel.readFloat()
     ) {
         isChecked = parcel.readByte() != 0.toByte()
     }
@@ -22,7 +22,7 @@ data class Gejala(
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(kodeGejala)
         parcel.writeString(gejalaDialami)
-        parcel.writeInt(bobot)
+        parcel.writeFloat(bobot)
         parcel.writeByte(if (isChecked) 1 else 0)
     }
 

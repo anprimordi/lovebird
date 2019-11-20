@@ -18,24 +18,24 @@ class DiagnosisPresenter internal constructor(private val view: DiagnosisContrac
 
     override fun loadListGejala() {
         val listGejala = arrayListOf(
-            Gejala(1, "Nafsu Makan Menurun", 5),
-            Gejala(2,"Kotoran Cair",3),
-            Gejala(3, "Bulu Tidak Rapi", 2),
-            Gejala(4, "Kurang Bergairah/Lemas", 3),
-            Gejala(5, "Bobot Burung Menurun", 2),
-            Gejala(6, "Jarang Berkicau", 2),
-            Gejala(7, "Sering Menggigit Bulu", 2),
-            Gejala(8, "Kotoran Berwarna Keruh", 2),
-            Gejala(9, "Kotoran Berbau Busuk", 2),
-            Gejala(10, "Banyak Kutu", 4),
-            Gejala(11, "Sayang Menggantung", 5),
-            Gejala(12, "Mata Berair", 4),
-            Gejala(13, "Mata Bengkak", 3),
-            Gejala(14, "Kaki Bengkak", 3),
-            Gejala(15, "Kuku Memanjang", 2),
-            Gejala(16, "Lemah", 3),
-            Gejala(17, "Kelumpuhan Anggota Badan", 4),
-            Gejala(18, "Kotoran Seperti Kapur", 3)
+            Gejala(0, "Nafsu Makan Menurun", 5f),
+            Gejala(1,"Kotoran Cair",3f),
+            Gejala(2, "Bulu Tidak Rapi", 2f),
+            Gejala(3, "Kurang Bergairah/Lemas", 3f),
+            Gejala(4, "Bobot Burung Menurun", 2f),
+            Gejala(5, "Jarang Berkicau", 2f),
+            Gejala(6, "Sering Menggigit Bulu", 2f),
+            Gejala(7, "Kotoran Berwarna Keruh", 2f),
+            Gejala(8, "Kotoran Berbau Busuk", 2f),
+            Gejala(9, "Banyak Kutu", 4f),
+            Gejala(10, "Sayang Menggantung", 5f),
+            Gejala(11, "Mata Berair", 4f),
+            Gejala(12, "Mata Bengkak", 3f),
+            Gejala(13, "Kaki Bengkak", 3f),
+            Gejala(14, "Kuku Memanjang", 2f),
+            Gejala(15, "Lemah", 3f),
+            Gejala(16, "Kelumpuhan Anggota Badan", 4f),
+            Gejala(17, "Kotoran Seperti Kapur", 3f)
 
         )
 

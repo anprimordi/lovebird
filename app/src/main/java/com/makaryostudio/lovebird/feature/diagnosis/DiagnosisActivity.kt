@@ -41,6 +41,7 @@ class DiagnosisActivity : AppCompatActivity(), DiagnosisContract.View {
             val intent = Intent(this, HasilActivity::class.java)
             intent.putExtra("namaburung", textNamaBurung.toString())
             startActivity(intent)
+            adapter.cbr()
         }
 
         bindView()

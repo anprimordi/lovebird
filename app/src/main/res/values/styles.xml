@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light.NoActionBar</item>
+    </style>
+
 </resources>

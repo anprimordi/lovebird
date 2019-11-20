@@ -9,10 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".feature.hasil.HasilActivity"></activity>
-        <activity android:name=".feature.diagnosis.DiagnosisActivity" />
-        <activity android:name=".feature.splashscreen.SplashScreenActivity" />
-        <activity android:name=".feature.home.HomeActivity">
+        <activity
+            android:name=".feature.hasil.HasilActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".feature.diagnosis.DiagnosisActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".feature.splashscreen.SplashScreenActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".feature.home.HomeActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
