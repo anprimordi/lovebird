@@ -19,6 +19,7 @@ class DiagnosisActivity : AppCompatActivity(), DiagnosisContract.View {
     private lateinit var rvGejala: RecyclerView
     private lateinit var adapter: DiagnosisAdapter
     private lateinit var textNamaBurung: EditText
+
     private lateinit var btnDiagnosis: FloatingActionButton
 
     override fun onLoadListGejalaSucceed(listGejala: List<Gejala>) {
@@ -37,10 +38,19 @@ class DiagnosisActivity : AppCompatActivity(), DiagnosisContract.View {
 
         btnDiagnosis = findViewById(R.id.button_diagnosis)
 
+        textNamaBurung = findViewById(R.id.edit_nama_burung) as EditText
+
+//        val penyakitBurung = intent.getStringExtra("penyakit")
+//        val cbr = intent.getStringExtra("persentaseCBR")
+
         btnDiagnosis.setOnClickListener {
             val intent = Intent(this, HasilActivity::class.java)
-            intent.putExtra("namaburung", textNamaBurung.toString())
-            startActivity(intent)
+          intent.putExtra("namaBurung", textNamaBurung.text.toString())
+//            intent.putExtra("penyakit", penyakitBurung)
+//            intent.putExtra("persentaseCBR", cbr )
+          //  startActivity(intent)
+            //print(textNamaBurung.text)
+            print(textNamaBurung.text)
             adapter.cbr()
         }
 
@@ -48,7 +58,7 @@ class DiagnosisActivity : AppCompatActivity(), DiagnosisContract.View {
     }
 
     private fun bindView() {
-        textNamaBurung = findViewById(R.id.edit_nama_burung)
+
 
         rvGejala = findViewById(R.id.rv_gejala)
         rvGejala.layoutManager = LinearLayoutManager(this)

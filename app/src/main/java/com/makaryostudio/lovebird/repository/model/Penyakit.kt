@@ -6,10 +6,12 @@ import android.os.Parcelable
 data class Penyakit(
     var kodePenyakit: Int,
     var namaPenyakit: String?,
+    var gejalaDialami: String?,
     var deskripsiPenyakit: String?
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString()
     ) {
@@ -18,6 +20,7 @@ data class Penyakit(
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(kodePenyakit)
         parcel.writeString(namaPenyakit)
+        parcel.writeString(gejalaDialami)
         parcel.writeString(deskripsiPenyakit)
     }
 
