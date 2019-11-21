@@ -59,19 +59,19 @@
                 android:layout_height="match_parent"
                 android:padding="8dp">
 
-                <TextView
-                    android:id="@+id/text_nama_burung"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/primary_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:text="nama burung" />
+<!--                <TextView-->
+<!--                    android:id="@+id/text_nama_burung"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--                    android:textColor="@color/primary_text"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    tools:text="nama burung" />-->
 
                 <TextView
                     android:id="@+id/text_gejala_dialami"
@@ -81,8 +81,8 @@
                     android:text="@string/hasil_gejala_dialami_text"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/primary_text"
-                    app:layout_constraintStart_toStartOf="@id/text_nama_burung"
-                    app:layout_constraintTop_toBottomOf="@id/text_nama_burung" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_gejala_dialami"
@@ -91,8 +91,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="16dp"
                     app:layout_constraintBottom_toTopOf="@id/text_diagnosis_penyakit"
-                    app:layout_constraintEnd_toEndOf="@id/text_nama_burung"
-                    app:layout_constraintStart_toStartOf="@id/text_nama_burung"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/text_gejala_dialami"
                     tools:listitem="@layout/item_hasil" />
 
@@ -104,18 +104,19 @@
                     android:text="@string/hasil_diagnosis_penyakit_text"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/primary_text"
-                    app:layout_constraintEnd_toEndOf="@id/text_nama_burung"
-                    app:layout_constraintStart_toStartOf="@id/text_nama_burung"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/rv_gejala_dialami" />
 
                 <TextView
                     android:id="@+id/text_hasil_diagnosis"
                     android:layout_width="0dp"
+                    android:textColor="@color/transparent_black"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     app:layout_constraintBottom_toTopOf="@id/text_solusi"
-                    app:layout_constraintEnd_toEndOf="@id/text_nama_burung"
-                    app:layout_constraintStart_toStartOf="@id/text_nama_burung"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/text_diagnosis_penyakit"
                     tools:text="Sakit ginjal" />
 
@@ -128,20 +129,46 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/primary_text"
                     app:layout_constraintBottom_toTopOf="@id/text_deskripsi_solusi"
-                    app:layout_constraintEnd_toEndOf="@id/text_nama_burung"
-                    app:layout_constraintStart_toStartOf="@id/text_nama_burung"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/text_hasil_diagnosis" />
 
                 <TextView
                     android:id="@+id/text_deskripsi_solusi"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/transparent_black"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="7"
+                    app:layout_constraintBottom_toBottomOf="@id/pencegahan"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_solusi"
+                    tools:text="@tools:sample/lorem/random" />
+                <TextView
+                    android:id="@+id/pencegahan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Pencegahan"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/primary_text"
+                    app:layout_constraintBottom_toTopOf="@id/text_pencegahan"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_deskripsi_solusi" />
+
+                <TextView
+                    android:id="@+id/text_pencegahan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/transparent_black"
                     android:layout_marginTop="8dp"
                     android:maxLines="7"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@id/text_nama_burung"
-                    app:layout_constraintStart_toStartOf="@id/text_nama_burung"
-                    app:layout_constraintTop_toBottomOf="@id/text_solusi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pencegahan"
                     tools:text="@tools:sample/lorem/random" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>

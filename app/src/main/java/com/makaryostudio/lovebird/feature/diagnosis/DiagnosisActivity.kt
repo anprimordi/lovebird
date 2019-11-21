@@ -38,20 +38,21 @@ class DiagnosisActivity : AppCompatActivity(), DiagnosisContract.View {
 
         btnDiagnosis = findViewById(R.id.button_diagnosis)
 
-        textNamaBurung = findViewById(R.id.edit_nama_burung) as EditText
+        //textNamaBurung = findViewById(R.id.edit_nama_burung) as EditText
 
 //        val penyakitBurung = intent.getStringExtra("penyakit")
 //        val cbr = intent.getStringExtra("persentaseCBR")
 
         btnDiagnosis.setOnClickListener {
             val intent = Intent(this, HasilActivity::class.java)
-          intent.putExtra("namaBurung", textNamaBurung.text.toString())
+         // intent.putExtra("namaBurung", textNamaBurung.text.toString())
 //            intent.putExtra("penyakit", penyakitBurung)
 //            intent.putExtra("persentaseCBR", cbr )
           //  startActivity(intent)
             //print(textNamaBurung.text)
-            print(textNamaBurung.text)
+            //print(textNamaBurung.text)
             adapter.cbr()
+            finish()
         }
 
         bindView()
