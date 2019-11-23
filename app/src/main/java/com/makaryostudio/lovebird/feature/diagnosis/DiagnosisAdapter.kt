@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.makaryostudio.lovebird.R
 import com.makaryostudio.lovebird.feature.hasil.HasilActivity
@@ -76,6 +77,11 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
                 gejala.isChecked = false
                 mCheckedGejala.remove(gejala)
                 inputGejala.remove(gejala.kodeGejala)
+
+                if (mCheckedGejala.isEmpty()) {
+                    Toast.makeText(context,"Pilih gejala yang dialami", Toast.LENGTH_SHORT).show()
+
+                }
             }
 
             intent.putParcelableArrayListExtra("checked",mCheckedGejala)
@@ -378,14 +384,14 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
             }
         }
 
-        println("Diagnosa Penyakit : $penyakit")
+        println("Diagnosis Penyakit : $penyakit")
         println("Persentase CBR : $persentaseCBR")
-
 
         intent.putExtra("penyakit", penyakit)
         intent.putExtra("solusi", solusi)
         intent.putExtra("pencegahan", pencegahan)
         intent.putExtra("persentaseCBR", persentaseCBR.toString())
+
 
         context.startActivity(intent)
     }

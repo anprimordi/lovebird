@@ -19,16 +19,18 @@ class HasilActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hasil)
 
+        bindView()
+
         textHasilDiagnosis = findViewById(R.id.text_hasil_diagnosis)
         textSolusi = findViewById(R.id.text_solusi)
-        textPencegahan = findViewById(R.id.title_pencegahan)
+        textPencegahan = findViewById(R.id.text_pencegahan)
 
-        val checked = intent.getParcelableExtra<Gejala>("checked")
+        val checked = intent.getParcelableArrayListExtra<Gejala>("checked")
         val penyakitBurung = intent.getStringExtra("penyakit")
         val solusi = intent.getStringExtra("solusi")
         val pencegahan = intent.getStringExtra("pencegahan")
 
-        val mListData: ArrayList<Gejala> = arrayListOf(checked)
+        val mListData: List<Gejala> = checked
 
         adapter.loadListData(mListData)
 
@@ -36,7 +38,6 @@ class HasilActivity : AppCompatActivity() {
         textSolusi.text = solusi
         textPencegahan.text = pencegahan
 
-        bindView()
     }
 
     private fun bindView() {

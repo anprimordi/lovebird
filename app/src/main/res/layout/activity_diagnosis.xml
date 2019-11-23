@@ -7,13 +7,13 @@
     tools:context=".feature.diagnosis.DiagnosisActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_top"
         android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:background="@color/colorPrimary"
-        android:layout_height="0dp" >
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/image_diagnosis_logo"
@@ -22,25 +22,21 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:contentDescription="@string/diagnosis_logo_img_description"
-            android:src="@drawable/app_logo_upper"
+            android:src="@drawable/ic_app_logo_upper"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/title_pilih_gejala"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_15"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/diagnosis_pilih_gejala_text"
-        android:layout_marginTop="64dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/primary_text"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="@id/card_form" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_horizontal_top"
+        android:id="@+id/guideline_horizontal_25"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -57,26 +53,32 @@
         android:id="@+id/card_form"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:background="@android:color/white"
         app:cardCornerRadius="32dp"
         app:cardElevation="4dp"
         app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_bottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_pilih_gejala">
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_15">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="8dp">
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline_vertical"
-                android:layout_width="1dp"
+            <TextView
+                android:id="@+id/title_pilih_gejala"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.5" />
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/diagnosis_pilih_gejala_text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/primary_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -86,13 +88,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@id/title_pilih_gejala">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_gejala"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:listitem="@layout/item_gejala" />
+
             </ScrollView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

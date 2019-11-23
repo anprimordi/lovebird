@@ -1,7 +1,6 @@
 package com.makaryostudio.lovebird.feature.diagnosis
 
 import android.os.Bundle
-import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
