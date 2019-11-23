@@ -1,25 +1,14 @@
 package com.makaryostudio.lovebird.feature.diagnosis
 
-import com.makaryostudio.lovebird.R
-import com.makaryostudio.lovebird.repository.model.Gejala
+import com.makaryostudio.lovebird.model.Gejala
 
 class DiagnosisPresenter internal constructor(private val view: DiagnosisContract.View) :
     DiagnosisContract.Presenter {
-//    override fun getSelectedItems(isSelected: Boolean): ArrayList<Gejala> {
-//        TODO("mengambil list yang dipilih")
-//        var list: ArrayList<Gejala> = ArrayList()
-//
-//        val gejala: Gejala = Gejala()
-//
-//        gejala.checked
-//    }
-
-
 
     override fun loadListGejala() {
         val listGejala = arrayListOf(
             Gejala(0, "Nafsu Makan Menurun", 5f),
-            Gejala(1,"Kotoran Cair",3f),
+            Gejala(1, "Kotoran Cair", 3f),
             Gejala(2, "Bulu Tidak Rapi", 2f),
             Gejala(3, "Kurang Bergairah/Lemas", 3f),
             Gejala(4, "Bobot Burung Menurun", 2f),

@@ -1,21 +1,16 @@
 package com.makaryostudio.lovebird.feature.hasil
 
-import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.makaryostudio.lovebird.R
-import com.makaryostudio.lovebird.repository.model.Gejala
-import com.makaryostudio.lovebird.repository.model.Penyakit
-import kotlinx.android.synthetic.main.item_hasil.view.*
+import com.makaryostudio.lovebird.model.Gejala
 
-class HasilAdapter internal constructor(private val context: Context) :
-    RecyclerView.Adapter<HasilAdapter.ViewHolder>() {
+class HasilAdapter : RecyclerView.Adapter<HasilAdapter.ViewHolder>() {
 
-    private var mListData: List<Penyakit>
+    private var mListData: List<Gejala>
 
     init {
         mListData = ArrayList()
@@ -23,10 +18,11 @@ class HasilAdapter internal constructor(private val context: Context) :
     }
 
     //constructor mListData
-    fun loadListData(mListData: List<Penyakit>) {
+    fun loadListData(mListData: List<Gejala>) {
         this.mListData = mListData
         notifyDataSetChanged()
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_hasil, parent, false)
@@ -38,11 +34,9 @@ class HasilAdapter internal constructor(private val context: Context) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val penyakit = mListData[position]
+        val gejala = mListData[position]
 
-//        val gejala = Intent()
-//        gejala.getParcelableExtra<Gejala>("gejala")
-        holder.textGejalaDialami.text = penyakit.gejalaDialami
+        holder.textGejalaDialami.text = gejala.gejalaDialami
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

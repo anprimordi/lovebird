@@ -7,6 +7,17 @@
     tools:context=".feature.home.HomeActivity">
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_center_25"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_center_40"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,24 +28,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_center_30"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout"
-        android:background="@android:color/holo_blue_light"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/guideline_center_30"
+        app:layout_constraintBottom_toTopOf="@id/guideline_center_25"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -44,9 +44,9 @@
         android:layout_height="128dp"
         android:contentDescription="@string/home_logo_img_description"
         android:src="@drawable/app_logo"
-        app:civ_circle_background_color="@color/solid_white"
         app:civ_border_color="@android:color/white"
         app:civ_border_width="4dp"
+        app:civ_circle_background_color="@color/solid_white"
         app:layout_constraintBottom_toBottomOf="@id/layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,8 +74,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:maxLines="15"
                 android:ellipsize="end"
+                android:maxLines="15"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/primary_text"
                 app:layout_constraintBottom_toBottomOf="parent"

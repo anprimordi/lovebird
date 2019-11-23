@@ -1,15 +1,13 @@
 package com.makaryostudio.lovebird.feature.diagnosis
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.makaryostudio.lovebird.R
-import com.makaryostudio.lovebird.feature.hasil.HasilActivity
-import com.makaryostudio.lovebird.repository.model.Gejala
+import com.makaryostudio.lovebird.model.Gejala
 
 class DiagnosisActivity : AppCompatActivity(), DiagnosisContract.View {
 
@@ -18,7 +16,6 @@ class DiagnosisActivity : AppCompatActivity(), DiagnosisContract.View {
 
     private lateinit var rvGejala: RecyclerView
     private lateinit var adapter: DiagnosisAdapter
-    private lateinit var textNamaBurung: EditText
 
     private lateinit var btnDiagnosis: FloatingActionButton
 
@@ -38,19 +35,7 @@ class DiagnosisActivity : AppCompatActivity(), DiagnosisContract.View {
 
         btnDiagnosis = findViewById(R.id.button_diagnosis)
 
-        //textNamaBurung = findViewById(R.id.edit_nama_burung) as EditText
-
-//        val penyakitBurung = intent.getStringExtra("penyakit")
-//        val cbr = intent.getStringExtra("persentaseCBR")
-
         btnDiagnosis.setOnClickListener {
-            val intent = Intent(this, HasilActivity::class.java)
-         // intent.putExtra("namaBurung", textNamaBurung.text.toString())
-//            intent.putExtra("penyakit", penyakitBurung)
-//            intent.putExtra("persentaseCBR", cbr )
-          //  startActivity(intent)
-            //print(textNamaBurung.text)
-            //print(textNamaBurung.text)
             adapter.cbr()
             finish()
         }

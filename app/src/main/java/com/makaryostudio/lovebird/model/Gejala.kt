@@ -1,4 +1,4 @@
-package com.makaryostudio.lovebird.repository.model
+package com.makaryostudio.lovebird.model
 
 import android.os.Parcel
 import android.os.Parcelable
