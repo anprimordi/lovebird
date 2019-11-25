@@ -13,6 +13,7 @@
     <!--  input  -->
     <string name="diagnosis_pilih_gejala_text">Pilih gejala yang timbul</string>
     <string name="diagnosis_logo_img_description">Gambar logo pada diagnosis</string>
+    <string name="diagnosis_empty_msg">Gejala tidak boleh kosong</string>
 
     <!--  hasil  -->
     <string name="hasil_gejala_dialami_text">Gejala yang dialami</string>

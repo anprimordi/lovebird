@@ -1,6 +1,7 @@
 package com.makaryostudio.lovebird.feature.diagnosis
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -35,16 +36,19 @@ class DiagnosisActivity : AppCompatActivity(), DiagnosisContract.View {
         btnDiagnosis = findViewById(R.id.button_diagnosis)
 
         btnDiagnosis.setOnClickListener {
-            adapter.cbr()
-            finish()
+            if (adapter.mCheckedGejala.isEmpty()) {
+                Toast.makeText(this, R.string.diagnosis_empty_msg, Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } else {
+                adapter.cbr()
+                finish()
+            }
         }
 
         bindView()
     }
 
     private fun bindView() {
-
-
         rvGejala = findViewById(R.id.rv_gejala)
         rvGejala.layoutManager = LinearLayoutManager(this)
         adapter = DiagnosisAdapter(this)
