@@ -87,10 +87,10 @@
                     android:id="@+id/title_gejala_dialami"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:text="@string/hasil_gejala_dialami_text"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/primary_text"
+                    android:textColor="@color/textPrimary"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -112,7 +112,7 @@
                     android:layout_marginTop="16dp"
                     android:text="@string/hasil_diagnosis_penyakit_text"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/primary_text"
+                    android:textColor="@color/textPrimary"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/rv_gejala_dialami" />
@@ -136,7 +136,7 @@
                     android:layout_marginTop="16dp"
                     android:text="@string/hasil_solusi_text"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/primary_text"
+                    android:textColor="@color/textPrimary"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/text_hasil_diagnosis" />
@@ -161,7 +161,7 @@
                     android:layout_marginTop="16dp"
                     android:text="@string/hasil_pencegahan_text"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/primary_text"
+                    android:textColor="@color/textPrimary"
                     app:layout_constraintBottom_toTopOf="@id/title_pencegahan"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

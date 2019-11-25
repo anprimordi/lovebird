@@ -10,16 +10,16 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_25"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_horizontal_25"
+        android:id="@+id/guideline_horizontal_45"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.45" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/image_splashscreen_logo"
@@ -30,17 +30,18 @@
         app:civ_border_color="@color/solid_white"
         app:civ_border_width="4dp"
         app:civ_circle_background_color="@color/solid_white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_45"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_45" />
 
-    <TextView
-        android:id="@+id/text_splashscreen_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/image_splashscreen_title"
+        android:layout_width="232dp"
+        android:layout_height="40dp"
         android:layout_marginTop="16dp"
-        android:text="@string/app_name"
+        android:contentDescription="@string/splashscreen_applogo_text"
+        android:src="@drawable/app_logo_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

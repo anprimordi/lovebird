@@ -9,7 +9,7 @@ import com.makaryostudio.lovebird.feature.diagnosis.DiagnosisActivity
 
 class HomeActivity : AppCompatActivity() {
 
-    lateinit var btnMulai: Button
+    private lateinit var btnMulai: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

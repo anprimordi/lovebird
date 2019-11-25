@@ -37,7 +37,6 @@ class HasilActivity : AppCompatActivity() {
         textHasilDiagnosis.text = penyakitBurung!!.toString()
         textSolusi.text = solusi
         textPencegahan.text = pencegahan
-
     }
 
     private fun bindView() {
@@ -45,6 +44,5 @@ class HasilActivity : AppCompatActivity() {
         rvGejalaDialami.layoutManager = LinearLayoutManager(this)
         adapter = HasilAdapter()
         rvGejalaDialami.adapter = adapter
-
     }
 }

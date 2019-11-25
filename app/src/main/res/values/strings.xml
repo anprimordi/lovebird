@@ -8,7 +8,7 @@
 
     <!--  home  -->
     <string name="home_logo_img_description">Logo aplikasi pada home</string>
-    <string name="action_mulai">mulai</string>
+    <string name="home_mulai_action">mulai</string>
 
     <!--  input  -->
     <string name="diagnosis_pilih_gejala_text">Pilih gejala yang timbul</string>
@@ -23,6 +23,7 @@
     <string name="hasil_green_dot_img">Gambar titik hijau pada item hasil</string>
     <string name="hasil_pencegahan_text">Pencegahan</string>
     <string name="hasil_hasil_text">Hasil</string>
+    <string name="splashscreen_applogo_text">teks logo splashscreen</string>
 
     <!--  nama penyakit  -->
     <array name="array_nama_penyakit">

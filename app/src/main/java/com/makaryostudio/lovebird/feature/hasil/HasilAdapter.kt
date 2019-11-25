@@ -39,7 +39,7 @@ class HasilAdapter : RecyclerView.Adapter<HasilAdapter.ViewHolder>() {
         holder.textGejalaDialami.text = gejala.gejalaDialami
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var textGejalaDialami: TextView = itemView.findViewById(R.id.text_hasil_gejala)
     }
 }

@@ -87,7 +87,7 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
         }
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var mCbGejala: CheckBox = itemView.findViewById(R.id.checkbox_gejala)
     }
 
@@ -389,9 +389,7 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
         intent.putExtra("solusi", solusi)
         intent.putExtra("pencegahan", pencegahan)
         intent.putExtra("persentaseCBR", persentaseCbr.toString())
-        //            Toast.makeText(context, R.string.diagnosis_empty_msg, Toast.LENGTH_SHORT).show()
-//        if (mCheckedGejala.isEmpty()) nilai = 0
-//        else nilai = 1
+
         context.startActivity(intent)
     }
 }
