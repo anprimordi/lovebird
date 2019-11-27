@@ -4,15 +4,18 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class Gejala(
+    var imageGejala: Int,
     var kodeGejala: Int,
     var gejalaDialami: String = "",
+    var deskripsiGejala: String = "",
     var bobot: Float
 ) : Parcelable {
     var isChecked: Boolean = false
 
     constructor(parcel: Parcel) : this(
-
         parcel.readInt(),
+        parcel.readInt(),
+        parcel.readString().toString(),
         parcel.readString().toString(),
         parcel.readFloat()
     ) {
@@ -20,8 +23,10 @@ data class Gejala(
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeInt(imageGejala)
         parcel.writeInt(kodeGejala)
         parcel.writeString(gejalaDialami)
+        parcel.writeString(deskripsiGejala)
         parcel.writeFloat(bobot)
         parcel.writeByte(if (isChecked) 1 else 0)
     }

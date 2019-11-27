@@ -25,6 +25,9 @@
     <string name="hasil_hasil_text">Hasil</string>
     <string name="splashscreen_applogo_text">teks logo splashscreen</string>
 
+    <!--  item  -->
+    <string name="item_gejala_img">gambar gejala yang dialami</string>
+
     <!--  nama penyakit  -->
     <array name="array_nama_penyakit">
         <item>Cacingan</item>

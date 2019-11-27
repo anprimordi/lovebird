@@ -3,6 +3,7 @@ package com.makaryostudio.lovebird.feature.diagnosis
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -49,8 +50,8 @@ class DiagnosisActivity : AppCompatActivity(), DiagnosisContract.View {
     }
 
     private fun bindView() {
-        rvGejala = findViewById(R.id.rv_gejala)
-        rvGejala.layoutManager = LinearLayoutManager(this)
+        rvGejala = findViewById(R.id.rv_diagnosis_gejala)
+        rvGejala.layoutManager = GridLayoutManager(this, 2)
         adapter = DiagnosisAdapter(this)
         rvGejala.adapter = adapter
     }

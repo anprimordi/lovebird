@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.makaryostudio.lovebird.R
@@ -55,13 +57,15 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val gejala = mListData[position]
 
-        holder.mCbGejala.text = gejala.gejalaDialami
-        holder.mCbGejala.isChecked = gejala.isChecked
+        holder.imgGejala.setImageResource(gejala.imageGejala)
+        holder.titleGejala.text = gejala.gejalaDialami
+        holder.textGejala.text = gejala.deskripsiGejala
+        holder.cbGejala.isChecked = gejala.isChecked
 
-        holder.mCbGejala.setOnClickListener {
+        holder.cbGejala.setOnClickListener {
 
             if (!gejala.isChecked) {
-                holder.mCbGejala.isChecked = true
+                holder.cbGejala.isChecked = true
                 gejala.isChecked = true
                 mCheckedGejala.add(gejala)
                 inputGejala.add(gejala.kodeGejala)
@@ -72,7 +76,7 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
                 }
 
             } else {
-                holder.mCbGejala.isChecked = false
+                holder.cbGejala.isChecked = false
                 gejala.isChecked = false
                 mCheckedGejala.remove(gejala)
                 inputGejala.remove(gejala.kodeGejala)
@@ -88,7 +92,10 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var mCbGejala: CheckBox = itemView.findViewById(R.id.checkbox_gejala)
+        var cbGejala: CheckBox = itemView.findViewById(R.id.checkbox_item_gejala)
+        var imgGejala: ImageView = itemView.findViewById(R.id.image_item_gejala)
+        var titleGejala: TextView = itemView.findViewById(R.id.text_item_gejala_title)
+        var textGejala: TextView = itemView.findViewById(R.id.text_item_gejala_description)
     }
 
     fun cbr() {

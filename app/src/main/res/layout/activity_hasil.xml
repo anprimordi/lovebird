@@ -28,7 +28,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_horizontal_15"
         android:layout_width="match_parent"
@@ -72,41 +71,43 @@
                 android:padding="8dp">
 
                 <TextView
+                    android:id="@+id/text_hasil_diagnosis_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
                     android:text="@string/hasil_diagnosis_text"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorAccent"
                     android:textStyle="italic"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/text_hasil_gejala_dialami_title"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/title_gejala_dialami"
+                    android:id="@+id/text_hasil_gejala_dialami_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
                     android:text="@string/hasil_gejala_dialami_text"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/textPrimary"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@id/text_hasil_diagnosis_title" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_gejala_dialami"
+                    android:id="@+id/rv_hasil_gejala_dialami"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:layout_marginBottom="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/title_gejala_dialami"
+                    app:layout_constraintTop_toBottomOf="@id/text_hasil_gejala_dialami_title"
                     tools:listitem="@layout/item_hasil" />
 
                 <TextView
-                    android:id="@+id/title_diagnosis_penyakit"
+                    android:id="@+id/text_hasil_diagnosis_penyakit_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -115,22 +116,21 @@
                     android:textColor="@color/textPrimary"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/rv_gejala_dialami" />
+                    app:layout_constraintTop_toBottomOf="@id/rv_hasil_gejala_dialami" />
 
                 <TextView
-                    android:id="@+id/text_hasil_diagnosis"
+                    android:id="@+id/text_hasil_diagnosis_penyakit"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:textColor="@color/transparent_black"
-                    app:layout_constraintBottom_toTopOf="@id/title_solusi"
+                    app:layout_constraintBottom_toTopOf="@id/text_hasil_solusi_title"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/title_diagnosis_penyakit"
+                    app:layout_constraintTop_toBottomOf="@id/text_hasil_diagnosis_penyakit_title"
                     tools:text="Sakit ginjal" />
 
                 <TextView
-                    android:id="@+id/title_solusi"
+                    android:id="@+id/text_hasil_solusi_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -139,50 +139,58 @@
                     android:textColor="@color/textPrimary"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/text_hasil_diagnosis" />
+                    app:layout_constraintTop_toBottomOf="@id/text_hasil_diagnosis_penyakit" />
 
                 <TextView
-                    android:id="@+id/text_solusi"
+                    android:id="@+id/text_hasil_solusi_description"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:ellipsize="end"
                     android:maxLines="7"
                     android:textColor="@color/transparent_black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/title_solusi"
+                    app:layout_constraintTop_toBottomOf="@id/text_hasil_solusi_title"
                     tools:text="@tools:sample/lorem/random" />
 
                 <TextView
-                    android:id="@+id/title_pencegahan"
+                    android:id="@+id/text_hasil_pencegahan_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="@string/hasil_pencegahan_text"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/textPrimary"
-                    app:layout_constraintBottom_toTopOf="@id/title_pencegahan"
+                    app:layout_constraintBottom_toTopOf="@id/text_hasil_pencegahan_title"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/text_solusi" />
+                    app:layout_constraintTop_toBottomOf="@id/text_hasil_solusi_description" />
 
                 <TextView
-                    android:id="@+id/text_pencegahan"
+                    android:id="@+id/text_hasil_pencegahan_description"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="40dp"
                     android:ellipsize="end"
                     android:maxLines="7"
                     android:textColor="@color/transparent_black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/title_pencegahan"
+                    app:layout_constraintTop_toBottomOf="@id/text_hasil_pencegahan_title"
                     tools:text="@tools:sample/lorem/random" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
     </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_hasil_selesai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:src="@drawable/ic_done_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
