@@ -4,26 +4,27 @@
     <string name="app_copyright">Hak cipta © 2019 Ki Joko Bodo</string>
 
     <!--  splashscreen  -->
-    <string name="splashscreen_applogo_img_description">Logo aplikasi pada splashscreen</string>
+    <string name="splashscreen_applogo_img">Logo aplikasi pada splashscreen</string>
+    <string name="splashscreen_applogo_text">teks logo splashscreen</string>
 
     <!--  home  -->
-    <string name="home_logo_img_description">Logo aplikasi pada home</string>
+    <string name="home_logo_img">Logo aplikasi pada home</string>
     <string name="home_mulai_action">mulai</string>
 
     <!--  input  -->
     <string name="diagnosis_pilih_gejala_text">Pilih gejala yang timbul</string>
-    <string name="diagnosis_logo_img_description">Gambar logo pada diagnosis</string>
+    <string name="diagnosis_logo_img">Gambar logo pada diagnosis</string>
     <string name="diagnosis_empty_msg">Gejala tidak boleh kosong</string>
+    <string name="diagnosis_applogo_text_img">gambar teks pada diagnosis</string>
 
     <!--  hasil  -->
     <string name="hasil_gejala_dialami_text">Gejala yang dialami</string>
     <string name="hasil_diagnosis_penyakit_text">Diagnosis penyakit</string>
     <string name="hasil_solusi_text">Solusi</string>
     <string name="hasil_diagnosis_text">Hasil Diagnosis</string>
-    <string name="hasil_green_dot_img">Gambar titik hijau pada item hasil</string>
+    <string name="hasil_green_dot_img">gambar titik hijau pada item hasil</string>
     <string name="hasil_pencegahan_text">Pencegahan</string>
     <string name="hasil_hasil_text">Hasil</string>
-    <string name="splashscreen_applogo_text">teks logo splashscreen</string>
 
     <!--  item  -->
     <string name="item_gejala_img">gambar gejala yang dialami</string>

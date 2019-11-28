@@ -262,18 +262,18 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
             persentaseCbr = hs1
             penyakit = "Cacingan"
             solusi =
-                "Obat alami yang biasa di gunakan untuk mengobati cacingan pada semua burung yaitu kulit mangga, wortel, biji lamtaro, biji jeruju, kelapa, krokot, daun pepaya, daun jambu dan masih banyak lainnya. Cara menggunakan obat alami untuk burung terkena cacingan yaitu dengan direbus atau memberikannya secara langsung."
+                "Obat alami yang umum digunakan untuk mengobati cacingan pada semua burung yaitu kulit mangga, wortel, biji lamtaro, biji jeruju, kelapa, krokot, daun pepaya, daun jambu dan masih banyak lainnya. Cara menggunakan obat alami untuk burung terkena cacingan yaitu dengan direbus atau memberikannya secara langsung."
             pencegahan =
-                "Cara pencegahan yakni menjaga kebersihan kandang dan selalu menjaga kandang agar tetap terkena sinar matahari sehingga virus tidak berkembang biak."
+                "Jaga kebersihan kandang dan selalu menjaga kandang agar tetap terkena sinar matahari sehingga virus tidak berkembang biak."
             bobotMax = tb1
         } else if (hs1 == persentaseCbr) {
             if (bobotMax < tb1) {
                 persentaseCbr = hs1
                 penyakit = "Cacingan"
                 solusi =
-                    "Obat alami yang biasa di gunakan untuk mengobati cacingan pada semua burung yaitu kulit mangga, wortel, biji lamtaro, biji jeruju, kelapa, krokot, daun pepaya, daun jambu dan masih banyak lainnya. Cara menggunakan obat alami untuk burung terkena cacingan yaitu dengan direbus atau memberikannya secara langsung."
+                    "Obat alami yang biasa digunakan untuk mengobati cacingan pada semua burung yaitu kulit mangga, wortel, biji lamtaro, biji jeruju, kelapa, krokot, daun pepaya, daun jambu dan masih banyak lainnya. Cara menggunakan obat alami untuk burung terkena cacingan yaitu dengan direbus atau memberikannya secara langsung."
                 pencegahan =
-                    "Cara pencegahan yakni menjaga kebersihan kandang dan selalu menjaga kandang agar tetap terkena sinar matahari sehingga virus tidak berkembang biak."
+                    "Jaga kebersihan kandang dan selalu menjaga kandang agar tetap terkena sinar matahari sehingga virus tidak berkembang biak."
                 bobotMax = tb1
             }
         }
@@ -283,7 +283,7 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
             penyakit = "Kutu Burung"
             solusi = "Pakai rebusan daun sirih atau air cucian beras untuk memandikan burung"
             pencegahan =
-                "Pencegahan Sering memandikan dan menjemur burung agar burung bebas dari kutu buruung"
+                "Sering mandikan dan jemur burung agar burung bebas dari kutu burung"
             bobotMax = tb2
         } else if (hs2 == persentaseCbr) {
             if (bobotMax < tb2) {
@@ -291,26 +291,25 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
                 penyakit = "Kutu Burung"
                 solusi = "Pakai rebusan daun sirih atau air cucian beras untuk memandikan burung"
                 pencegahan =
-                    "Pencegahan sering memandikan dan menjemur burung agar burung bebas dari kutu burung"
+                    "Sering mandikan dan jemur burung agar burung bebas dari kutu burung"
                 bobotMax = tb2
             }
         }
 
         if (hs3 > persentaseCbr) {
             persentaseCbr = hs3
-            penyakit = "Snot"
+            penyakit = "Snot (pilek)"
             solusi =
-                "Tumbuhan kitoloid dapat dimanfaatkan untuk mengobati snot pada burung. Caranya dengan menggunakan satu buah bunga dari tumbuhan kitoloid. Selanjutnya cuci bunga dan rendam dalam air gelas selama 5-10 menit.Selanjutnya teteskan air rendaman bunga kitoloid da paruh burung lakukan 3 kali sehari."
+                "Tumbuhan kitoloid dapat dimanfaatkan untuk mengobati snot pada burung. \n1. Petik satu buah bunga dari tumbuhan kitoloid. \n2. Cuci bunga dan rendam dalam air gelas selama 5-10 menit. \n3. Teteskan air rendaman bunga kitoloid pada paruh burung lakukan 3 kali sehari."
             pencegahan =
                 "Penyakit ini disebabkan oleh virus dan cara menanggulanginya adalah menjaga kebersihan kandang dan segera obati burung yang sedang sakit tersebut."
-
             bobotMax = tb3
         } else if (hs3 == persentaseCbr) {
             if (bobotMax < tb3) {
                 persentaseCbr = hs3
-                penyakit = "Snot"
+                penyakit = "Snot (pilek)"
                 solusi =
-                    "Tumbuhan kitoloid dapat dimanfaatkan untuk mengobati snot pada burung. Caranya dengan menggunakan satu buah bunga dari tumbuhan kitoloid. Selanjutnya cuci bunga dan rendam dalam air gelas selama 5-10 menit.Selanjutnya teteskan air rendaman bunga kitoloid da paruh burung lakukan 3 kali sehari."
+                    "Tumbuhan kitoloid dapat dimanfaatkan untuk mengobati snot pada burung. \n1. Petik satu buah bunga dari tumbuhan kitoloid. \n2. Cuci bunga dan rendam dalam air gelas selama 5-10 menit. \n3. Teteskan air rendaman bunga kitoloid pada paruh burung lakukan 3 kali sehari."
                 pencegahan =
                     "Penyakit ini disebabkan oleh virus dan cara menanggulanginya adalah menjaga kebersihan kandang dan segera obati burung yang sedang sakit tersebut."
                 bobotMax = tb3
@@ -321,17 +320,18 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
             persentaseCbr = hs4
             penyakit = "Berak Kapur"
             solusi =
-                "Cara menanggulanginya bersihkan tempat kotor tersebut menggunakan bioseptik. Jika burung sudah terinfeksi pisahkan dengan burung yang lain.Solusi : Burung yang sakit diisolir dan diberi lampu serta di sungkup agar suhu dalam sangkar hangat dan terhindar dari terpaan angina.Berikan obat untuk penyakit berak kapur burung seperti contoh tetrachlor,sulfamix dll."
-            pencegahan = "sering membersihkan kandang, tempat makan dan minum."
+                "Bersihkan tempat kotor tersebut menggunakan bioseptik. Jika burung sudah terinfeksi pisahkan dengan burung yang lain."
+            pencegahan =
+                "Sering membersihkan kandang, tempat makan dan minum."
             bobotMax = tb4
         } else if (hs4 == persentaseCbr) {
             if (bobotMax < tb4) {
                 persentaseCbr = hs4
                 penyakit = "Berak Kapur"
                 solusi =
-                    "Burung yang sakit diisolir dan diberi lampu serta di sungkup agar suhu dalam sangkar hangat dan terhindar dari terpaan angina.Berikan obat untuk penyakit berak kapur burung seperti contoh tetrachlor,sulfamix dll."
+                    "Bersihkan tempat kotor tersebut menggunakan bioseptik. Jika burung sudah terinfeksi pisahkan dengan burung yang lain."
                 pencegahan =
-                    "sering membersihkan kandang, tempat makan dan minum.Cara menanggulanginya bersihkan tempat kotor tersebut menggunakan bioseptik. Jika burung sudah terinfeksi pisahkan dengan burung yang lain."
+                    "Sering membersihkan kandang, tempat makan dan minum."
                 bobotMax = tb4
             }
         }
@@ -340,18 +340,18 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
             persentaseCbr = hs5
             penyakit = "Mencret Bakteri"
             solusi =
-                "Dengan Air rebusan kulit buah naga dapat mengobati mencret pada burung. 1. Merebus kulit buah naga 2. Setelah mendidih dan berubah menjadi merah , lalu saring 3. Kemudian, ramuan diberikan kepada burung sebagai air minum."
+                "Air rebusan kulit buah naga dapat mengobati mencret pada burung. \n1. Rebus kulit buah naga \n2. Saring setelah mendidih dan berubah menjadi merah \n3. Berikan ramuan kepada burung sebagai air minum."
             pencegahan =
-                "Penyakit ini diakibatkan tempat makan dan minum burung yang kotor sehingga cacing dapat berkembang biak. Jadi diusahakan untuk menjaga kebersihan tempat makan dan minum burung."
+                "Penyakit ini diakibatkan tempat makan dan minum burung yang kotor sehingga cacing dapat berkembang biak. Jaga kebersihan tempat makan dan minum burung."
             bobotMax = tb5
         } else if (hs5 == persentaseCbr) {
             if (bobotMax < tb5) {
                 persentaseCbr = hs5
                 penyakit = "Mencret Bakteri"
                 solusi =
-                    "Dengan Air rebusan kulit buah naga dapat mengobati mencret pada burung. 1. Merebus kulit buah naga 2. Setelah mendidih dan berubah menjadi merah , lalu saring 3. Kemudian, ramuan diberikan kepada burung sebagai air minum."
+                    "Air rebusan kulit buah naga dapat mengobati mencret pada burung. \n1. Rebus kulit buah naga \n2. Saring setelah mendidih dan berubah menjadi merah \n3. Berikan ramuan kepada burung sebagai air minum."
                 pencegahan =
-                    "Penyakit ini diakibatkan tempat makan dan minum burung yang kotor sehingga cacing dapat berkembang biak. Jadi diusahakan untuk menjaga kebersihan tempat makan dan minum burung."
+                    "Penyakit ini diakibatkan tempat makan dan minum burung yang kotor sehingga cacing dapat berkembang biak. Jaga kebersihan tempat makan dan minum burung."
                 bobotMax = tb5
             }
         }
@@ -360,18 +360,18 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
             persentaseCbr = hs6
             penyakit = "Bubul"
             solusi =
-                ": Bersihkan kaki burung yang terkena bubul dengan air. Lalu beri obat anti jamur seperti contoh betason N dll.Biarkan hingga 2 hari dan jangan dimandikan . setelah 2 hari cuci kaki burung dengan air hangat."
+                "Bersihkan kaki burung yang terkena bubul dengan air. Lalu beri obat anti jamur seperti contoh betason N dll.Biarkan hingga 2 hari dan jangan dimandikan . setelah 2 hari cuci kaki burung dengan air hangat."
             pencegahan =
-                "penyakit ini disebabkan oleh bakteri dan cara menanggulanginya dengan rutin membersihkan kandang dengan rutin."
+                "Penyakit ini disebabkan oleh bakteri. Bersihkan kandang secara rutin."
             bobotMax = tb6
         } else if (hs6 == persentaseCbr) {
             if (bobotMax < tb6) {
                 persentaseCbr = hs6
                 penyakit = "Bubul"
                 solusi =
-                    ": Bersihkan kaki burung yang terkena bubul dengan air. Lalu beri obat anti jamur seperti contoh betason N dll.Biarkan hingga 2 hari dan jangan dimandikan . setelah 2 hari cuci kaki burung dengan air hangat."
+                    "Bersihkan kaki burung yang terkena bubul dengan air. Lalu beri obat anti jamur seperti contoh betason N dll.Biarkan hingga 2 hari dan jangan dimandikan . setelah 2 hari cuci kaki burung dengan air hangat."
                 pencegahan =
-                    "penyakit ini disebabkan oleh bakteri dan cara menanggulanginya dengan rutin membersihkan kandang dengan rutin."
+                    "Penyakit ini disebabkan oleh bakteri. Bersihkan kandang secara rutin."
                 bobotMax = tb6
             }
         }
@@ -379,9 +379,10 @@ class DiagnosisAdapter internal constructor(private val context: Context) :
         if (hs7 > persentaseCbr) {
             persentaseCbr = hs7
             penyakit = "Virus Burung"
-            solusi = "Memberikan obat antibiotik khusus untuk burung seperti Bionic+"
+            solusi =
+                "Berikan obat antibiotik khusus untuk burung seperti Bionic+"
             pencegahan =
-                "Virus ini menyerang daya tahan tubuh burung dan solusinya adalah menjaga kebersihan kandang serta menjaga kandang agar tetap terkena sinar matahari sehingga virus susah untuk berkembang biak."
+                "Virus ini menyerang daya tahan tubuh burung. Jaga kebersihan kandang serta menjaga kandang agar tetap terkena sinar matahari sehingga virus sulit berkembang biak."
         } else if (hs7 == persentaseCbr) {
             if (bobotMax < tb7) {
                 persentaseCbr = hs7

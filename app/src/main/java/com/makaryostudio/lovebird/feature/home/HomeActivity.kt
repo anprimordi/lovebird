@@ -15,7 +15,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        btnMulai = findViewById(R.id.button_mulai)
+        btnMulai = findViewById(R.id.button_home_mulai)
 
         btnMulai.setOnClickListener {
             startActivity(Intent(this, DiagnosisActivity::class.java))

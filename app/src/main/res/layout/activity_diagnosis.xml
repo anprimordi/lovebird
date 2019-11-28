@@ -16,15 +16,26 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/image_diagnosis_logo"
-            android:layout_width="240dp"
-            android:layout_height="48dp"
+            android:id="@+id/image_diagnosis_app_logo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="@string/diagnosis_logo_img_description"
-            android:src="@drawable/ic_app_logo_upper"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/diagnosis_logo_img"
+            android:src="@drawable/ic_app_logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_diagnosis_app_text"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/diagnosis_applogo_text_img"
+            android:src="@drawable/ic_app_logo_text"
+            app:layout_constraintBottom_toBottomOf="@id/image_diagnosis_app_logo"
+            app:layout_constraintStart_toEndOf="@id/image_diagnosis_app_logo"
+            app:layout_constraintTop_toTopOf="@id/image_diagnosis_app_logo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
